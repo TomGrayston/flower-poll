@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>That interview question sample code</title>
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+<meta http-equiv='Content-Language' content='EN'>
+<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1.0' />
+</head>
+<body>
+<h1>Flower popularity poll</h1>
+<script>
+    var x
+    var y
+    var w
+    var z
+    var y
+</script> 
+<p>Select your very favourite flower from the list.</p>
+<select id="mySelect" onchange="myFunction1(this)">
+  <option value="Violet">Violet</option>
+  <option value="Lilly">Lilly</option>
+  <option value="Snowdrop">Snowdrop</option>
+  <option value="Rose">Rose</option>
+  <option value="Poppy">Poppy</option>
+  <option value="Daffodil">Daffodil</option>
+  <option value="Bluebell">Bluebell</option>
+</select>
+<p>Select your almost favourite flower from the list.</p>
+<select id="mySelect" onchange="myFunction2(this)">
+  <option value="Violet">Violet</option>
+  <option value="Lilly">Lilly</option>
+  <option value="Snowdrop">Snowdrop</option>
+  <option value="Rose">Rose</option>
+  <option value="Poppy">Poppy</option>
+  <option value="Daffodil">Daffodil</option>
+  <option value="Bluebell">Bluebell</option>
+</select>
+<p>Select your 3rd favourite flower from the list.</p>
+<select id="mySelect" onchange="myFunction3(this)">
+  <option value="Violet">Violet</option>
+  <option value="Lilly">Lilly</option>
+  <option value="Snowdrop">Snowdrop</option>
+  <option value="Rose">Rose</option>
+  <option value="Poppy">Poppy</option>
+  <option value="Daffodil">Daffodil</option>
+  <option value="Bluebell">Bluebell</option>
+</select>
+<p>Select your 4th favourite flower from the list.</p>
+<select id="mySelect" onchange="myFunction4(this)">
+  <option value="Violet">Violet</option>
+  <option value="Lilly">Lilly</option>
+  <option value="Snowdrop">Snowdrop</option>
+  <option value="Rose">Rose</option>
+  <option value="Poppy">Poppy</option>
+  <option value="Daffodil">Daffodil</option>
+  <option value="Bluebell">Bluebell</option>
+</select>
+<button onclick="dostuff()">Send my favourites</button>
+
+<script>
+function myFunction1(e) {
+x = e.selectedIndex
+}
+function myFunction2(e) {
+y = e.selectedIndex
+}
+function myFunction3(e) {
+w = e.selectedIndex
+}
+function myFunction4(e) {
+z = e.selectedIndex
+}
+</script>
+
+<script>
+function dostuff(){
+if ( x != y ) {
+if ( y == x ) {
+console.log("violet");
+} else {
+if ( x!=w && w!=z && w!=y ) {
+console.log("lily");
+} else {
+console.log("snowdrop");
+}
+}
+} else {
+if ( x == y || x == z ) {
+if ( x == y && y == z ) {
+console.log("rose");
+} else {
+if ( y == z ) {
+console.log("poppy");
+} else {
+console.log("daffodil");
+}
+}
+} else {
+console.log("bluebell");
+}
+}
+//ajax code to send stuff to server for analysis
+}
+</script>
+</body>
+</html>

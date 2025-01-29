@@ -1,0 +1,6 @@
+.error {
+    background-color: lightcoral;
+    color: black;
+    outline: 4px black;
+    font-weight: bold;
+}
